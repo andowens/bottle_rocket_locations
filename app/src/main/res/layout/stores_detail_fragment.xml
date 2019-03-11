@@ -38,8 +38,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="2:1"
-            app:layout_constraintWidth_percent="0.80"
-            android:src="@drawable/macys"/>
+            app:layout_constraintWidth_percent="0.80" />
 
     <LinearLayout
             android:id="@+id/address_container"
