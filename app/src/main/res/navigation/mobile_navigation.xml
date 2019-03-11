@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/mobile_navigation"
+            app:startDestination="@id/storesListFragment">
+    <fragment android:id="@+id/storesListFragment"
+              android:name="com.andrewowens.rocketstores.ui.list.StoresListFragment"
+              android:label="stores_list_fragment" tools:layout="@layout/stores_list_fragment">
+        <action android:id="@+id/actionDetail"
+                app:destination="@+id/storesDetailFragment"/>
+    </fragment>
+    <fragment android:id="@+id/storesDetailFragment"
+              android:name="com.andrewowens.rocketstores.ui.detail.StoresDetailFragment"
+              android:label="stores_detail_fragment" tools:layout="@layout/stores_detail_fragment">
+        <argument android:name="storeId" app:argType="string"/>
+        <argument android:name="storeName" app:argType="string"/>
+    </fragment>
+</navigation>

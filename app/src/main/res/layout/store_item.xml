@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?listPreferredItemHeightLarge"
+        android:layout_margin="@dimen/margin_4dp"
+        app:cardCornerRadius="@dimen/radius_5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="?listPreferredItemHeightLarge">
+
+        <ImageView
+                android:id="@+id/imageView_logo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.4"
+                android:src="@drawable/macys"/>
+
+        <ImageView
+                android:id="@+id/imageView_locationImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toBottomOf="@id/imageView_logo"
+                app:layout_constraintEnd_toStartOf="@id/textView_storeLocation"
+                app:layout_constraintBottom_toTopOf="@id/textView_phoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.06"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:src="@drawable/ic_location_24dp"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+                android:id="@+id/textView_storeLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintBottom_toTopOf="@id/textView_phoneNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/imageView_locationImage"
+                app:layout_constraintTop_toBottomOf="@id/imageView_logo"
+                app:layout_constraintVertical_bias="0.0"
+                android:text="@string/address_place_holder"/>
+
+        <ImageView
+                android:id="@+id/imageView_phoneImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toBottomOf="@id/textView_storeLocation"
+                app:layout_constraintEnd_toStartOf="@id/textView_phoneNumber"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.05"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:src="@drawable/ic_phone_24dp"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+                android:id="@+id/textView_phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView_phoneImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                android:text="@string/phone_placeholder"
+                android:layout_marginRight="@dimen/margin_8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

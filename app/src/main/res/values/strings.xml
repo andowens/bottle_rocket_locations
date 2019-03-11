@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Rocket Stores</string>
+    <string name="loading">Loading…</string>
+    <string name="address_place_holder">7801 Citrus Park Town Center Mall</string>
+    <string name="bottomLine">Green River, WY 82935</string>
+    <string name="phone_placeholder">000-123-1234</string>
+    <string name="check_connection">No data is available at time please check your connection</string>
 </resources>

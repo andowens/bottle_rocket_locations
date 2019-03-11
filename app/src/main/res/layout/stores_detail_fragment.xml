@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.detail.StoresDetailFragment">
+
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            app:constraint_referenced_ids="progressBar_loading, textView_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+            android:id="@+id/progressBar_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+            android:id="@+id/imageView_storeLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintWidth_percent="0.80"
+            android:src="@drawable/macys"/>
+
+    <LinearLayout
+            android:id="@+id/address_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageView_storeLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textView_phoneNumber"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/textView_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:text="@string/address_place_holder"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginLeft="@dimen/margin_8dp"/>
+        <TextView
+                android:id="@+id/textView_bottomAddressLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:text="@string/bottomLine"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginLeft="@dimen/margin_8dp"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/imageView_phoneImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_phone_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/textView_phoneNumber"
+            app:layout_constraintBottom_toBottomOf="@id/textView_phoneNumber"
+            app:layout_constraintEnd_toStartOf="@id/textView_phoneNumber"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            app:layout_constraintWidth_percent="0.07"
+            android:layout_marginRight="@dimen/margin_8dp"/>
+
+    <TextView
+            android:id="@+id/textView_phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="@string/phone_placeholder"
+            app:layout_constraintTop_toBottomOf="@id/address_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

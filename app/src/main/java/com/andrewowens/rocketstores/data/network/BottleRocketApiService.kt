@@ -1,9 +1,8 @@
 package com.andrewowens.rocketstores.data.network
 
-import com.andrewowens.rocketstores.data.response.StoresResponse
+import com.andrewowens.rocketstores.data.network.response.StoresResponse
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,7 +10,7 @@ import retrofit2.http.GET
 
 //http://sandbox.bottlerocketapps.com/BR_Android_CodingExam_2015_Server/stores.json
 
-interface BottleRocketApi {
+interface BottleRocketApiService {
 
     /***
      * Deferred function that will be used to get the stores data from the api.
@@ -22,10 +21,10 @@ interface BottleRocketApi {
     companion object {
 
         /**
-         * Using invoke so that instead of having to do something like BottleRocketApi.create()
-         * to create the api we can do BottleRocketApi()
+         * Using invoke so that instead of having to do something like BottleRocketApiService.create()
+         * to create the api we can do BottleRocketApiService()
          */
-        operator fun invoke(connectivityInterceptor: ConnectivityInterceptor): BottleRocketApi {
+        operator fun invoke(connectivityInterceptor: ConnectivityInterceptor): BottleRocketApiService {
 
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(connectivityInterceptor)
@@ -37,7 +36,7 @@ interface BottleRocketApi {
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-                .create(BottleRocketApi::class.java)
+                .create(BottleRocketApiService::class.java)
         }
     }
 }
